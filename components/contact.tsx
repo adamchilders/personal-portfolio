@@ -3,27 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 
-export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
 
   return (
     <section id="contact" className="py-20 bg-slate-50">
@@ -88,52 +68,23 @@ export function Contact() {
             </div>
           </div>
 
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="font-display font-bold text-sm tracking-wide block mb-2">NAME</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-4 bg-white brutalist-border font-sans text-lg focus:outline-none focus:ring-0 focus:border-blue-600"
+          <div className="flex justify-center">
+            <div className="relative">
+              <div className="bg-white brutalist-border brutalist-shadow">
+                <img
+                  src="/professional-developer-portrait.png"
+                  alt="Adam Childers"
+                  className="w-80 h-96 object-cover grayscale"
                 />
+                <div className="p-2 bg-gray-900 text-white">
+                  <span className="font-mono text-xs tracking-wide">profile.jpg</span>
+                </div>
               </div>
 
-              <div>
-                <label className="font-display font-bold text-sm tracking-wide block mb-2">EMAIL</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-4 bg-white brutalist-border font-sans text-lg focus:outline-none focus:ring-0 focus:border-blue-600"
-                />
-              </div>
-
-              <div>
-                <label className="font-display font-bold text-sm tracking-wide block mb-2">MESSAGE</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full p-4 bg-white brutalist-border font-sans text-lg resize-none focus:outline-none focus:ring-0 focus:border-blue-600"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full font-display font-bold text-lg py-4 bg-gray-900 text-white brutalist-border brutalist-shadow-hover transition-none hover:bg-blue-600"
-              >
-                SEND MESSAGE
-              </Button>
-            </form>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-emerald-600 brutalist-shadow-green transform rotate-12"></div>
+            </div>
           </div>
+          
         </div>
       </div>
     </section>
