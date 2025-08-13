@@ -25,9 +25,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Alex Chen - Full Stack Developer",
-  description: "Full stack web developer building websites that hit hard. React, Node.js, TypeScript.",
-  generator: "v0.app",
+  title: "Adam Childers - Full Stack Developer",
+  description: "Full stack web developer with a passion for building high-quality web applications.",
 }
 
 export default function RootLayout({

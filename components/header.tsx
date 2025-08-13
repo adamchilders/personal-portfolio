@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white brutalist-border border-t-0 border-l-0 border-r-0">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="font-display font-black text-xl tracking-tight">ALEX.DEV</div>
+        <div className="font-display font-black text-xl tracking-tight">adamc.fyi</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
