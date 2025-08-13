@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 
 
+export function Contact() {
   return (
     <section id="contact" className="py-20 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4">
