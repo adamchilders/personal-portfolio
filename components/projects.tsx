@@ -1,38 +1,19 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-const projects = [
-  {
-    id: "milken-institute-rebuild",
-    title: "MILKEN INSTITUTE WEBSITE REBUILD",
-    description:
-      "Led initiative to rebuild website frontend to improve site reliability and cache performance. Reduced yearly IT spending by over $35,000 through optimization and smart caching layers.",
-    tech: ["DRUPAL", "PHP", "AWS", "VARNISH", "REDIS"],
-    image: "/milken-website-rebuild.png",
-    github: "#",
-    live: "https://milkeninstitute.org",
-  },
-  {
-    id: "drupal-migration-platform",
-    title: "DRUPAL MIGRATION PLATFORM",
-    description:
-      "Successfully migrated legacy Drupal 7 websites to Drupal 8/9 and coordinated content migration from Saxotech (Newscycle) systems to Drupal with data integrity verification.",
-    tech: ["DRUPAL", "PHP", "MYSQL", "MIGRATION", "TESTING"],
-    image: "/drupal-migration-dashboard.png",
-    github: "#",
-    live: "#",
-  },
-  {
-    id: "3d-video-management",
-    title: "3D VIDEO MANAGEMENT SYSTEM",
-    description:
-      "Designed custom application for managing playback of encrypted 3-D video content on custom hardware, plus healthcare portal for user management and content distribution.",
-    tech: ["C#.NET", "SQL CE", "ENCRYPTION", "HEALTHCARE"],
-    image: "/3d-video-system.png",
-    github: "#",
-    live: "#",
-  },
-]
+import { projects as projectsObj } from "@/lib/projects"
+
+// Convert the projects object to an array for display, adding the id and using fallback for missing fields
+const projects = Object.entries(projectsObj).map(([id, project]) => ({
+  id,
+  title: project.title,
+  description: project.description,
+  tech: project.tech,
+  image: project.image || "/placeholder.svg",
+  imagetitle: project.imagetitle || project.title,
+  github: project.github,
+  live: project.live,
+}))
 
 export function Projects() {
   return (
