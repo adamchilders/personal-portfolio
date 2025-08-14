@@ -62,7 +62,7 @@ export function Projects() {
                   />
                   <div className="p-1 bg-gray-900 text-white">
                     <span className="font-mono text-xs tracking-wide">
-                      {project.title.toLowerCase().replace(/\s+/g, "_")}.jpg
+                      {project.imagetitle}
                     </span>
                   </div>
                 </div>

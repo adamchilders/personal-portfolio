@@ -10,7 +10,8 @@ const projects = {
     longDescription:
       "As Associate Director of IT at Milken Institute, I spearheaded a comprehensive website rebuild initiative focused on improving site reliability and performance. The project involved frontend reconstruction, implementation of smart caching layers, and AWS infrastructure optimization. Through strategic vendor evaluation and environment rightsizing, achieved significant cost savings while enhancing user experience and system reliability.",
     tech: ["DRUPAL", "PHP", "AWS", "VARNISH", "REDIS", "S3", "CLOUDFRONT"],
-    image: "/milken-website-rebuild.png",
+    image: "/mi-old.jpg",
+    imagetitle: "Milken Institute Website Rebuild",
     github: "#",
     live: "https://milkeninstitute.org",
     features: [
@@ -35,9 +36,10 @@ const projects = {
     longDescription:
       "Led complex migration projects involving legacy Drupal 7 to Drupal 8/9 upgrades and Saxotech (Newscycle) to Drupal transitions. Developed comprehensive content migration scripts, implemented data integrity verification processes, and coordinated testing phases to ensure seamless transitions with zero data loss. Projects required deep understanding of both legacy and modern Drupal architectures.",
     tech: ["DRUPAL", "PHP", "MYSQL", "MIGRATION SCRIPTS", "DATA INTEGRITY", "TESTING"],
-    image: "/drupal-migration-dashboard.png",
+    image: "/aw.jpg",
+    imagetitle: "Drupal Migration Platform",
     github: "#",
-    live: "#",
+    live: "https://autoweek.com",
     features: [
       "Drupal 7 to 8/9 migration",
       "Saxotech to Drupal conversion",
@@ -60,7 +62,8 @@ const projects = {
     longDescription:
       "Developed a comprehensive 3D video management system for healthcare applications, featuring encrypted content playback on specialized hardware. The system included a custom C#.NET application for content management and a healthcare portal enabling users to manage hardware, report issues through a ticketing system, participate in member forums, and download new video content for their 3-D playback systems.",
     tech: ["C#.NET", "SQL CE 3.5", "ENCRYPTION", "HEALTHCARE PORTAL", "TICKETING", "FORUMS"],
-    image: "/3d-video-system.png",
+    image: "/3detc.jpg",
+    imagetitle: "3D Video Management System",
     github: "#",
     live: "#",
     features: [
