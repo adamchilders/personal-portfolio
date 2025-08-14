@@ -38,12 +38,12 @@ export function About() {
             <div className="relative">
               <div className="bg-white brutalist-border brutalist-shadow">
                 <img
-                  src="/professional-developer-portrait.png"
+                  src="/professional-developer-portrait.jpg"
                   alt="Adam Childers"
                   className="w-80 h-96 object-cover grayscale"
                 />
                 <div className="p-2 bg-gray-900 text-white">
-                  <span className="font-mono text-xs tracking-wide">profile.jpg</span>
+                  <span className="font-mono text-xs tracking-wide">AWS 2024</span>
                 </div>
               </div>
 
