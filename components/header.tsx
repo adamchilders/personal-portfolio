@@ -7,7 +7,15 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+    const element = document.getElementById(id)
+    if (element) {
+      const headerHeight = 80 // Approximate header height
+      const elementPosition = element.offsetTop - headerHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      })
+    }
     setIsMenuOpen(false)
   }
 
@@ -24,6 +32,20 @@ export function Header() {
             className="font-display font-bold text-sm tracking-wide hover:bg-gray-900 hover:text-white transition-none brutalist-border border-transparent hover:border-gray-900"
           >
             WORK
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => scrollToSection("personal-projects")}
+            className="font-display font-bold text-sm tracking-wide hover:bg-emerald-600 hover:text-white transition-none brutalist-border border-transparent hover:border-emerald-600"
+          >
+            PERSONAL
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="font-display font-bold text-sm tracking-wide hover:bg-purple-600 hover:text-white transition-none brutalist-border border-transparent hover:border-purple-600"
+          >
+            <a href="/blog">BLOG</a>
           </Button>
           <Button
             variant="ghost"
@@ -61,6 +83,20 @@ export function Header() {
               className="font-display font-bold text-sm tracking-wide justify-start hover:bg-gray-900 hover:text-white transition-none"
             >
               WORK
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => scrollToSection("personal-projects")}
+              className="font-display font-bold text-sm tracking-wide justify-start hover:bg-emerald-600 hover:text-white transition-none"
+            >
+              PERSONAL
+            </Button>
+            <Button
+              asChild
+              variant="ghost"
+              className="font-display font-bold text-sm tracking-wide justify-start hover:bg-purple-600 hover:text-white transition-none"
+            >
+              <a href="/blog">BLOG</a>
             </Button>
             <Button
               variant="ghost"

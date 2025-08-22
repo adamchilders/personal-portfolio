@@ -121,6 +121,25 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Prevent line breaks on hyphens */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  /* Specifically prevent breaking at hyphens in project descriptions */
+  .font-sans {
+    white-space: nowrap;
+  }
+
+  /* Allow wrapping but prevent hyphen breaks */
+  .font-sans {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
 }
 
 /* Updated neo brutalist custom styles to use blue/green theme */
@@ -148,6 +167,19 @@
 
 .brutalist-border-green {
   border: 4px solid #059669;
+}
+
+.brutalist-shadow-purple {
+  box-shadow: 8px 8px 0px #7c3aed;
+}
+
+.brutalist-shadow-hover-purple:hover {
+  box-shadow: 4px 4px 0px #7c3aed;
+  transform: translate(4px, 4px);
+}
+
+.brutalist-border-purple {
+  border: 4px solid #7c3aed;
 }
 
 .font-display {
